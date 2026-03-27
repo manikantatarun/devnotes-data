@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1774637218996_xa13ets",
+    "type": "qa",
+    "category": "coding",
+    "title": "Two Sum",
+    "question": "Given an array of integers and a target, return indices of two numbers that add up to target.",
+    "language": "python",
+    "solutions": [
+      {
+        "language": "python",
+        "solution": ""
+      },
+      {
+        "language": "java",
+        "solution": ""
+      }
+    ],
+    "tags": [],
+    "createdAt": 1774637218996,
+    "updatedAt": 1774637218996
+  }
+]
