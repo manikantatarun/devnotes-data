@@ -1,0 +1,22 @@
+{
+  "type": "qa",
+  "category": "coding",
+  "title": "Two Sum",
+  "tags": [],
+  "question": "Given an array of integers and a target, return indices of two numbers that add up to target.",
+  "answer": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        need = target - n\n        if need in seen:\n            return [seen[need], i]\n        seen[n] = i\n    return []",
+  "language": "python",
+  "solutions": [
+    {
+      "language": "python",
+      "solution": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        need = target - n\n        if need in seen:\n            return [seen[need], i]\n        seen[n] = i\n    return []"
+    },
+    {
+      "language": "java",
+      "solution": "int[] twoSum(int[] nums, int target) {\n    Map<Integer, Integer> seen = new HashMap<>();\n    for (int i = 0; i < nums.length; i++) {\n        int need = target - nums[i];\n        if (seen.containsKey(need)) return new int[]{seen.get(need), i};\n        seen.put(nums[i], i);\n    }\n    return new int[]{};\n}"
+    }
+  ],
+  "id": "1774637218996_xa13ets",
+  "createdAt": 1774637218996,
+  "updatedAt": 1774637218996
+}
