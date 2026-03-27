@@ -1,0 +1,17 @@
+{
+  "id": "1774646005040_psh63jt",
+  "type": "qa",
+  "category": "coding",
+  "title": "3Sum",
+  "language": "python",
+  "languages": [
+    "python",
+    "java"
+  ],
+  "tags": [
+    "data-structure"
+  ],
+  "preview": "Given an integer array nums, return all the unique triplets [[nums[i], nums[j], nums[k]]](http://vscodecontentref/0) such that:\n\ni != j, j != k, and i != k\nnums[i] + nums[j] + nums[k] == 0\nThe solutio",
+  "createdAt": 1774646005040,
+  "updatedAt": 1774646005040
+}
