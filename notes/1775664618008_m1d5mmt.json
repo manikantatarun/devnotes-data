@@ -1,0 +1,25 @@
+{
+  "type": "qa",
+  "category": "coding",
+  "title": "Hackathon Winner",
+  "tags": [
+    "interview",
+    "ibm"
+  ],
+  "question": "Erica and Bob are competing in a hackathon by solving programming problems of three difficulty levels:\n\nEasy (E) → 1 point\nMedium (M) → 3 points\nHard (H) → 5 points\n\nYou are given two strings:\n\nerica → problems solved by Erica\nbob → problems solved by Bob\n\nEach character represents a problem type.\n\n🎯 Task\n\nCalculate total scores and return:\n\n\"Erica\" if Erica has a higher score\n\"Bob\" if Bob has a higher score\n\"Tie\" if both scores are equal\n\n🧪 Example\nInput:\nerica = \"EHH\"\nbob = \"EME\"\n\nOutput:\nErica",
+  "answer": "public class HackathonWinner {\n\n    private static int getScore(String s) {\n        int score = 0;\n\n        for (char c : s.toCharArray()) {\n            if (c == 'E') score += 1;\n            else if (c == 'M') score += 3;\n            else if (c == 'H') score += 5;\n        }\n\n        return score;\n    }\n\n    public static String hackathonWinner(String erica, String bob) {\n        int ericaScore = getScore(erica);\n        int bobScore = getScore(bob);\n\n        if (ericaScore > bobScore) return \"Erica\";\n        if (bobScore > ericaScore) return \"Bob\";\n        return \"Tie\";\n    }\n}",
+  "language": "java",
+  "solutions": [
+    {
+      "language": "java",
+      "solution": "public class HackathonWinner {\n\n    private static int getScore(String s) {\n        int score = 0;\n\n        for (char c : s.toCharArray()) {\n            if (c == 'E') score += 1;\n            else if (c == 'M') score += 3;\n            else if (c == 'H') score += 5;\n        }\n\n        return score;\n    }\n\n    public static String hackathonWinner(String erica, String bob) {\n        int ericaScore = getScore(erica);\n        int bobScore = getScore(bob);\n\n        if (ericaScore > bobScore) return \"Erica\";\n        if (bobScore > ericaScore) return \"Bob\";\n        return \"Tie\";\n    }\n}"
+    },
+    {
+      "language": "python",
+      "solution": "def hackathon_winner(erica: str, bob: str) -> str:\n    points = {'E': 1, 'M': 3, 'H': 5}\n\n    erica_score = sum(points[ch] for ch in erica)\n    bob_score = sum(points[ch] for ch in bob)\n\n    if erica_score > bob_score:\n        return \"Erica\"\n    elif bob_score > erica_score:\n        return \"Bob\"\n    else:\n        return \"Tie\""
+    }
+  ],
+  "id": "1775664618008_m1d5mmt",
+  "createdAt": 1775664618008,
+  "updatedAt": 1775664618008
+}
