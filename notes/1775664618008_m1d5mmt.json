@@ -17,9 +17,17 @@
     {
       "language": "python",
       "solution": "def hackathon_winner(erica: str, bob: str) -> str:\n    points = {'E': 1, 'M': 3, 'H': 5}\n\n    erica_score = sum(points[ch] for ch in erica)\n    bob_score = sum(points[ch] for ch in bob)\n\n    if erica_score > bob_score:\n        return \"Erica\"\n    elif bob_score > erica_score:\n        return \"Bob\"\n    else:\n        return \"Tie\""
+    },
+    {
+      "language": "java",
+      "solution": "import java.util.*;\nimport java.util.function.Function;\nimport java.util.stream.Collectors;\n\npublic class HackathonWinner {\n\n    public static String hackathonWinner(String erica, String bob) {\n\n        // Score mapping\n        Map<Character, Integer> points = new HashMap<>();\n        points.put('E', 1);\n        points.put('M', 3);\n        points.put('H', 5);\n\n        // Function to calculate score using streams\n        Function<String, Integer> calculateScore = s ->\n                s.chars()\n                 .map(c -> points.get((char) c))\n                 .sum();\n\n        int ericaScore = calculateScore.apply(erica);\n        int bobScore = calculateScore.apply(bob);\n\n        return ericaScore > bobScore ? \"Erica\"\n             : bobScore > ericaScore ? \"Bob\"\n             : \"Tie\";\n    }\n\n    public static void main(String[] args) {\n        System.out.println(hackathonWinner(\"EHH\", \"EME\")); // Erica\n    }\n}"
+    },
+    {
+      "language": "java",
+      "solution": "public static String hackathonWinner(String erica, String bob) {\n\n    java.util.function.Function<String, Integer> score = s ->\n        s.chars().map(c -> c == 'E' ? 1 : c == 'M' ? 3 : 5).sum();\n\n    return Integer.compare(score.apply(erica), score.apply(bob)) > 0 ? \"Erica\" :\n           Integer.compare(score.apply(erica), score.apply(bob)) < 0 ? \"Bob\" :\n           \"Tie\";\n}"
     }
   ],
   "id": "1775664618008_m1d5mmt",
   "createdAt": 1775664618008,
-  "updatedAt": 1775664618008
+  "updatedAt": 1775664911782
 }
