@@ -1,0 +1,18 @@
+{
+  "id": "1775664713371_sqn5e3z",
+  "type": "qa",
+  "category": "coding",
+  "title": "Minimum Cost to Reach Average Capacity",
+  "language": "java",
+  "languages": [
+    "java",
+    "python"
+  ],
+  "tags": [
+    "interview",
+    "ibm"
+  ],
+  "preview": "You are given:\n\ncomputational[i] → current capacity of server i\ncost[i] → cost to increase capacity of server i by 1\navgCap → required average capacity\nmaxCap → maximum allowed capacity per server\n🎯 ",
+  "createdAt": 1775664713371,
+  "updatedAt": 1775664713371
+}
