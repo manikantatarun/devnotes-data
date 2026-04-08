@@ -1,0 +1,18 @@
+{
+  "id": "1775664618008_m1d5mmt",
+  "type": "qa",
+  "category": "coding",
+  "title": "Hackathon Winner",
+  "language": "java",
+  "languages": [
+    "java",
+    "python"
+  ],
+  "tags": [
+    "interview",
+    "ibm"
+  ],
+  "preview": "Erica and Bob are competing in a hackathon by solving programming problems of three difficulty levels:\n\nEasy (E) → 1 point\nMedium (M) → 3 points\nHard (H) → 5 points\n\nYou are given two strings:\n\nerica ",
+  "createdAt": 1775664618008,
+  "updatedAt": 1775664618008
+}
