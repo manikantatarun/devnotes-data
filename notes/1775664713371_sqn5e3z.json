@@ -1,0 +1,25 @@
+{
+  "type": "qa",
+  "category": "coding",
+  "title": "Minimum Cost to Reach Average Capacity",
+  "tags": [
+    "interview",
+    "ibm"
+  ],
+  "question": "You are given:\n\ncomputational[i] → current capacity of server i\ncost[i] → cost to increase capacity of server i by 1\navgCap → required average capacity\nmaxCap → maximum allowed capacity per server\n🎯 Task\n\nFind the minimum total cost required to ensure:\n\naverage capacity\n≥\navgCap\naverage capacity≥avgCap\n⚠️ Rules\nYou can increase any server multiple times\nNo server can exceed maxCap\nIf impossible, return -1\n🧪 Example\nInput:\ncomputational = [1, 1, 1]\ncost = [10, 7, 4]\navgCap = 2\nmaxCap = 5\n\nOutput:\n12\n\n🧠 Approach\nConvert average → total requirement: n * avgCap\nFind how much increase is needed\nUse greedy:\nIncrease cheapest servers first",
+  "answer": "import java.util.*;\n\npublic class MinCostServers {\n\n    static class Server {\n        int cap;\n        int cost;\n\n        Server(int cap, int cost) {\n            this.cap = cap;\n            this.cost = cost;\n        }\n    }\n\n    public static long minCostRequired(List<Integer> computational,\n                                       List<Integer> cost,\n                                       int avgcap,\n                                       int maxcap) {\n\n        int n = computational.size();\n\n        long currentSum = 0;\n        for (int c : computational) {\n            currentSum += c;\n        }\n\n        long requiredSum = (long) n * avgcap;\n\n        if (currentSum >= requiredSum) {\n            return 0;\n        }\n\n        long need = requiredSum - currentSum;\n\n        List<Server> servers = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            servers.add(new Server(computational.get(i), cost.get(i)));\n        }\n\n        // Sort by cost ascending\n        servers.sort(Comparator.comparingInt(s -> s.cost));\n\n        long totalCost = 0;\n\n        for (Server s : servers) {\n            if (need <= 0) break;\n\n            int maxIncrease = maxcap - s.cap;\n            if (maxIncrease <= 0) continue;\n\n            long increase = Math.min(need, maxIncrease);\n\n            totalCost += increase * s.cost;\n            need -= increase;\n        }\n\n        return (need > 0) ? -1 : totalCost;\n    }\n}",
+  "language": "java",
+  "solutions": [
+    {
+      "language": "java",
+      "solution": "import java.util.*;\n\npublic class MinCostServers {\n\n    static class Server {\n        int cap;\n        int cost;\n\n        Server(int cap, int cost) {\n            this.cap = cap;\n            this.cost = cost;\n        }\n    }\n\n    public static long minCostRequired(List<Integer> computational,\n                                       List<Integer> cost,\n                                       int avgcap,\n                                       int maxcap) {\n\n        int n = computational.size();\n\n        long currentSum = 0;\n        for (int c : computational) {\n            currentSum += c;\n        }\n\n        long requiredSum = (long) n * avgcap;\n\n        if (currentSum >= requiredSum) {\n            return 0;\n        }\n\n        long need = requiredSum - currentSum;\n\n        List<Server> servers = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            servers.add(new Server(computational.get(i), cost.get(i)));\n        }\n\n        // Sort by cost ascending\n        servers.sort(Comparator.comparingInt(s -> s.cost));\n\n        long totalCost = 0;\n\n        for (Server s : servers) {\n            if (need <= 0) break;\n\n            int maxIncrease = maxcap - s.cap;\n            if (maxIncrease <= 0) continue;\n\n            long increase = Math.min(need, maxIncrease);\n\n            totalCost += increase * s.cost;\n            need -= increase;\n        }\n\n        return (need > 0) ? -1 : totalCost;\n    }\n}"
+    },
+    {
+      "language": "python",
+      "solution": "def min_cost_required(computational, cost, avgCap, maxCap):\n    n = len(computational)\n\n    current_sum = sum(computational)\n    required_sum = n * avgCap\n\n    if current_sum >= required_sum:\n        return 0\n\n    need = required_sum - current_sum\n\n    # Pair (cost, capacity)\n    servers = sorted(zip(cost, computational))\n\n    total_cost = 0\n\n    for c, cap in servers:\n        if need <= 0:\n            break\n\n        max_increase = maxCap - cap\n        if max_increase <= 0:\n            continue\n\n        increase = min(need, max_increase)\n\n        total_cost += increase * c\n        need -= increase\n\n    return -1 if need > 0 else total_cost"
+    }
+  ],
+  "id": "1775664713371_sqn5e3z",
+  "createdAt": 1775664713371,
+  "updatedAt": 1775664713371
+}
