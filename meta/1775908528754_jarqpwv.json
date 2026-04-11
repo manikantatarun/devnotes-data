@@ -1,0 +1,18 @@
+{
+  "id": "1775908528754_jarqpwv",
+  "type": "coding",
+  "category": "algorithms",
+  "title": "Product Of Array Except Itself",
+  "language": "java",
+  "languages": [
+    "java"
+  ],
+  "tags": [
+    "leetcode",
+    "algorithms",
+    "java"
+  ],
+  "preview": "Given an integer array nums, return an array answer such that answer[i] is equal to the\nproduct of all the elements of nums except nums[i].\nThe product of any prefix or suffix of nums is guaranteed to",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
