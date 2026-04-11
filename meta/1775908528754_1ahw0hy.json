@@ -1,0 +1,18 @@
+{
+  "id": "1775908528754_1ahw0hy",
+  "type": "coding",
+  "category": "algorithms",
+  "title": "Duplicate",
+  "language": "java",
+  "languages": [
+    "java"
+  ],
+  "tags": [
+    "leetcode",
+    "algorithms",
+    "java"
+  ],
+  "preview": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct\nInput: nums = [1,2,3,1)\nOutput: true\nInput: nums = [1,2,3,4]\nOu",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
