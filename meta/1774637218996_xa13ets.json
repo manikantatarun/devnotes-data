@@ -1,6 +1,6 @@
 {
   "id": "1774637218996_xa13ets",
-  "type": "qa",
+  "type": "coding",
   "category": "algorithms",
   "title": "Two Sum",
   "language": "python",
@@ -17,5 +17,5 @@
   ],
   "preview": "Given an array of integers and a target, return indices of two numbers that add up to target.",
   "createdAt": 1774637218996,
-  "updatedAt": 1774637218996
+  "updatedAt": 1775927895615
 }
