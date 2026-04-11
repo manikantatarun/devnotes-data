@@ -1,0 +1,16 @@
+{
+  "type": "qa",
+  "category": "coding",
+  "title": "Java Stream API - Sorting elements",
+  "question": "How to use Stream.sorted() in Java?",
+  "answer": "Example usage:\n\n```java\n////    per.stream().sorted((a,b) -> a.getAge() - b.getAge()).limit(2).toList();\n\n```",
+  "tags": [
+    "java",
+    "stream-api",
+    "sorted"
+  ],
+  "language": "java",
+  "id": "1775908528754_3zz3gd8",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
