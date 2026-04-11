@@ -1,0 +1,18 @@
+{
+  "id": "1775908528754_qkdw4h3",
+  "type": "qa",
+  "category": "coding",
+  "title": "Java Stream API - Grouping elements",
+  "language": "java",
+  "languages": [
+    "java"
+  ],
+  "tags": [
+    "java",
+    "stream-api",
+    "groupingBy"
+  ],
+  "preview": "How to use Stream.groupingBy() in Java?",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
