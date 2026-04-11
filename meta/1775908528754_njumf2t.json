@@ -1,0 +1,18 @@
+{
+  "id": "1775908528754_njumf2t",
+  "type": "coding",
+  "category": "algorithms",
+  "title": "Trapping Rain Water",
+  "language": "java",
+  "languages": [
+    "java"
+  ],
+  "tags": [
+    "leetcode",
+    "algorithms",
+    "java"
+  ],
+  "preview": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much\nwater it can trap after raining.\nInput: height = [0,1,0,2,1,0,1,3,2,1,2,1]\n6 units of rai",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
