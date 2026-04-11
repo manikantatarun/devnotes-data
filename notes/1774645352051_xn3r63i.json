@@ -1,6 +1,6 @@
 {
-  "type": "qa",
-  "category": "algorithms",
+  "type": "coding",
+  "category": "data-structures",
   "title": "Two Sum",
   "tags": [
     "data-structure"
@@ -20,5 +20,7 @@
   ],
   "id": "1774645352051_xn3r63i",
   "createdAt": 1774645352051,
-  "updatedAt": 1774645352051
+  "updatedAt": 1775928287393,
+  "problem": "Given an array of integers nums and an integer target, return the indices of the two numbers that add up to target. You may assume exactly one solution exists, and you may not use the same element twice.\n\nExample:\n\nInput:  nums = [2, 7, 11, 15], target = 9\nOutput: [0, 1]   // nums[0] + nums[1] = 2 + 7 = 9",
+  "solution": "def two_sum(nums: list[int], target: int) -> list[int]:\n    seen = {}  # value -> index\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i\n    return []"
 }
