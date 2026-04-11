@@ -1,0 +1,18 @@
+{
+  "id": "1775904183801_c8n0sin",
+  "type": "qa",
+  "category": "coding",
+  "title": "What is a closure in JavaScript?",
+  "language": "javascript",
+  "languages": [
+    "javascript"
+  ],
+  "tags": [
+    "javascript",
+    "closures",
+    "scope"
+  ],
+  "preview": "Explain what a closure is in JavaScript and when you would use one.",
+  "createdAt": 1775904183801,
+  "updatedAt": 1775904183801
+}
