@@ -1,7 +1,7 @@
 {
   "id": "1774645352051_xn3r63i",
-  "type": "qa",
-  "category": "algorithms",
+  "type": "coding",
+  "category": "data-structures",
   "title": "Two Sum",
   "language": "python",
   "languages": [
@@ -13,5 +13,5 @@
   ],
   "preview": "Given an array of integers nums and an integer target, return the indices of the two numbers that add up to target. You may assume exactly one solution exists, and you may not use the same element twi",
   "createdAt": 1774645352051,
-  "updatedAt": 1774645352051
+  "updatedAt": 1775928287393
 }
