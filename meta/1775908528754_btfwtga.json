@@ -1,0 +1,18 @@
+{
+  "id": "1775908528754_btfwtga",
+  "type": "coding",
+  "category": "algorithms",
+  "title": "Rotated Sorted Array",
+  "language": "java",
+  "languages": [
+    "java"
+  ],
+  "tags": [
+    "leetcode",
+    "algorithms",
+    "java"
+  ],
+  "preview": "Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example,\nthe array nums = (0,1,2,4,5,6,7) might become:\n• 14,5,6,7,0,1,2) if it was rotated 4 times.\n• 10,1",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
