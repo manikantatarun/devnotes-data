@@ -1,0 +1,18 @@
+{
+  "id": "1775908528754_lqvf2u5",
+  "type": "qa",
+  "category": "coding",
+  "title": "Java Stream API - Transforming elements",
+  "language": "java",
+  "languages": [
+    "java"
+  ],
+  "tags": [
+    "java",
+    "stream-api",
+    "map"
+  ],
+  "preview": "How to use Stream.map() in Java?",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
