@@ -1,0 +1,16 @@
+{
+  "type": "qa",
+  "category": "coding",
+  "title": "What is a closure in JavaScript?",
+  "question": "Explain what a closure is in JavaScript and when you would use one.",
+  "answer": "A closure is a function that has access to variables in its outer (enclosing) lexical scope, even after the outer function has returned. Closures are created every time a function is created.\n\n**Use cases:**\n- Data privacy (private variables)\n- Event handlers and callbacks\n- Partial application and currying\n- Module pattern\n\n**Example:**\n```javascript\nfunction counter() {\n  let count = 0;\n  return function() {\n    return ++count;\n  };\n}\n\nconst increment = counter();\nconsole.log(increment()); // 1\nconsole.log(increment()); // 2\n```",
+  "tags": [
+    "javascript",
+    "closures",
+    "scope"
+  ],
+  "language": "javascript",
+  "id": "1775903840264_msjoikd",
+  "createdAt": 1775903840264,
+  "updatedAt": 1775903840264
+}
