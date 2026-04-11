@@ -1,6 +1,6 @@
 {
   "type": "qa",
-  "category": "coding",
+  "category": "general",
   "title": "Java Stream API - Transforming elements",
   "question": "How to use Stream.map() in Java?",
   "answer": "The map() method transforms each element of a stream by applying a function to it.\n\n**Syntax:**\n```java\n<R> Stream<R> map(Function<? super T, ? extends R> mapper)\n```\n\n**Example:**\n```java\nList<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\n\n// Convert to uppercase\nList<String> upperNames = names.stream()\n    .map(String::toUpperCase)\n    .collect(Collectors.toList());\n// Result: [\"ALICE\", \"BOB\", \"CHARLIE\"]\n\n// Map to lengths\nList<Integer> lengths = names.stream()\n    .map(String::length)\n    .collect(Collectors.toList());\n// Result: [5, 3, 7]\n```\n\n**Use cases:**\n- Transforming object properties\n- Type conversion\n- Extracting specific fields from objects\n- Applying calculations to each element",

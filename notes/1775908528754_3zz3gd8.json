@@ -1,6 +1,6 @@
 {
   "type": "qa",
-  "category": "coding",
+  "category": "general",
   "title": "Java Stream API - Sorting elements",
   "question": "How to use Stream.sorted() in Java?",
   "answer": "The sorted() method orders stream elements either naturally or by a custom comparator.\n\n**Syntax:**\n```java\nStream<T> sorted()  // Natural order\nStream<T> sorted(Comparator<? super T> comparator)  // Custom order\n```\n\n**Example:**\n```java\nList<Person> persons = Arrays.asList(\n    new Person(\"p1\", 1000),\n    new Person(\"p2\", 10000),\n    new Person(\"p3\", 9000)\n);\n\n// Sort by salary (ascending)\nList<Person> sortedBySalary = persons.stream()\n    .sorted((a, b) -> a.getSalary() - b.getSalary())\n    .limit(2)\n    .collect(Collectors.toList());\n\n// Sort by salary (descending)\nList<Person> topEarners = persons.stream()\n    .sorted(Comparator.comparing(Person::getSalary).reversed())\n    .collect(Collectors.toList());\n```\n\n**Use cases:**\n- Ordering collections\n- Finding top/bottom N elements\n- Custom sorting logic\n- Sorting by multiple fields",

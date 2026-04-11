@@ -1,6 +1,6 @@
 {
   "type": "qa",
-  "category": "coding",
+  "category": "algorithms",
   "title": "3Sum",
   "tags": [
     "data-structure"

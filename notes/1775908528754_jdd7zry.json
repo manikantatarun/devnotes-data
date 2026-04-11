@@ -1,6 +1,6 @@
 {
   "type": "qa",
-  "category": "coding",
+  "category": "general",
   "title": "Java Stream API - Filtering elements",
   "question": "How to use Stream.filter() in Java?",
   "answer": "The filter() method is used to select elements from a stream that match a given predicate.\n\n**Syntax:**\n```java\nStream<T> filter(Predicate<? super T> predicate)\n```\n\n**Example:**\n```java\nList<Integer> numbers = Arrays.asList(23, 45, 65, 23, 543, 23, 45);\n\n// Filter numbers divisible by 5\nint sum = numbers.stream()\n    .filter(e -> e % 5 == 0)\n    .mapToInt(Integer::intValue)\n    .sum();\n// Result: sum = 65 + 45 + 45 = 155\n```\n\n**Use cases:**\n- Filtering null values\n- Selecting elements based on conditions\n- Removing duplicates when combined with distinct()\n- Filtering by object properties",
