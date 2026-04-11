@@ -1,0 +1,18 @@
+{
+  "id": "1775908528754_c67ad8p",
+  "type": "coding",
+  "category": "algorithms",
+  "title": "Largest3 Same Digit Number String",
+  "language": "java",
+  "languages": [
+    "java"
+  ],
+  "tags": [
+    "leetcode",
+    "algorithms",
+    "java"
+  ],
+  "preview": "You are given a string num representing a large integer. An integer is good if it meets the following conditions:\nIt is a substring of num with length 3.\nIt consists of only one unique digit.\nReturn t",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
