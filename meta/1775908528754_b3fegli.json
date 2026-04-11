@@ -1,0 +1,18 @@
+{
+  "id": "1775908528754_b3fegli",
+  "type": "coding",
+  "category": "algorithms",
+  "title": "Maxium Subarray",
+  "language": "java",
+  "languages": [
+    "java"
+  ],
+  "tags": [
+    "leetcode",
+    "algorithms",
+    "java"
+  ],
+  "preview": "Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.\nA subarray is a contiguous part of an array.\nInput: nums = [-2,",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
