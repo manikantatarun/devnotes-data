@@ -1,0 +1,16 @@
+{
+  "type": "qa",
+  "category": "coding",
+  "title": "Java Stream API - Grouping elements",
+  "question": "How to use Stream.groupingBy() in Java?",
+  "answer": "Example usage:\n\n```java\n//    Map<String,  Map<String, Long>> values = humans.stream().collect(Collectors.groupingBy(Human::getState,Collectors.groupingBy(Human::getGender,Collectors.counting())));\n\n```",
+  "tags": [
+    "java",
+    "stream-api",
+    "groupingBy"
+  ],
+  "language": "java",
+  "id": "1775908528754_qkdw4h3",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
