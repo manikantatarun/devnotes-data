@@ -1,0 +1,21 @@
+{
+  "id": "1774637218996_xa13ets",
+  "type": "qa",
+  "category": "coding",
+  "title": "Two Sum",
+  "language": "python",
+  "languages": [
+    "python",
+    "java"
+  ],
+  "tags": [
+    "algorithms",
+    "hashmap",
+    "arrays",
+    "leetcode",
+    "two-pointers"
+  ],
+  "preview": "Given an array of integers and a target, return indices of two numbers that add up to target.",
+  "createdAt": 1774637218996,
+  "updatedAt": 1774637218996
+}

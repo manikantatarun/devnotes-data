@@ -1,7 +1,7 @@
 {
   "id": "1775908528754_c9yccgq",
   "type": "coding",
-  "category": "devops",
+  "category": "coding",
   "title": "Jenkins Pipeline with Parallel Execution, Parameterized Build, Code Quality, Deployment, Automated Triggers",
   "language": "groovy",
   "languages": [

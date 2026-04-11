@@ -1,7 +1,7 @@
 {
   "id": "1775908528754_0gt55cm",
   "type": "coding",
-  "category": "devops",
+  "category": "coding",
   "title": "Jenkins Pipeline with Parallel Execution, Code Quality, Deployment",
   "language": "groovy",
   "languages": [

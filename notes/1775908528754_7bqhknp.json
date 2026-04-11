@@ -1,13 +1,16 @@
 {
   "type": "coding",
-  "category": "algorithms",
+  "category": "coding",
   "title": "Three Sum",
   "problem": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]\nsuch that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\nNotice that the solution set must not contain duplicate triplets.\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\nInput: nums = [0,1,1]",
   "solution": "package problems;\n\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\n\npublic class threeSum {\n\n    public static void main(String[] args){\n\n        int[] nums = {-1,0,1,2,-1,-4};\n\n        System.out.println(\"Three Sum of array are \" + threeSumList(nums));\n\n    }\n    \n\n    public static List<List<Integer>> threeSumList(int[] nums) {\n\n        // https://leetcode.com/problems/3sum\n\n        // Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] \n        // such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n        // Notice that the solution set must not contain duplicate triplets.\n        // Example 1:\n\n        // Input: nums = [-1,0,1,2,-1,-4]\n        // Output: [[-1,-1,2],[-1,0,1]]\n        // Explanation: \n        // nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\n        // nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\n        // nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\n        // The distinct triplets are [-1,0,1] and [-1,-1,2].\n        // Notice that the order of the output and the order of the triplets does not matter.\n        // Example 2:\n\n        // Input: nums = [0,1,1]\n        // Output: []\n        // Explanation: The only possible triplet does not sum up to 0.\n\n        Arrays.sort(nums);\n        List<List<Integer>> result = new ArrayList<>();\n        \n        for (int i = 0; i<nums.length && nums[i] <=0; i++){\n            if (i == 0 || nums[i] != nums[i-1]){\n                twoSum2(nums, i, result);\n            }\n        }\n        \n        return result;\n    }\n\n    static void twoSum2(int[] nums, int i, List<List<Integer>> result ){\n        int left = i+1;\n        int right = nums.length-1;\n\n        while(left<right){\n            int sum = nums[i] + nums[left] + nums[right];\n\n            if(sum<0){\n                ++left;\n            }else if (sum>0){\n                --right;\n            }else{\n                result.add(Arrays.asList(nums[i] ,nums[left++] , nums[right--]));\n                while(left<right && nums[left] == nums[left-1]){\n                    ++left;\n                }\n            }\n        }\n    }\n}\n",
   "tags": [
     "leetcode",
     "algorithms",
-    "java"
+    "java",
+    "two-pointers",
+    "sorting",
+    "arrays"
   ],
   "language": "java",
   "id": "1775908528754_7bqhknp",

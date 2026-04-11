@@ -1,7 +1,7 @@
 {
   "id": "1775908528754_7bqhknp",
   "type": "coding",
-  "category": "algorithms",
+  "category": "coding",
   "title": "Three Sum",
   "language": "java",
   "languages": [
@@ -10,7 +10,10 @@
   "tags": [
     "leetcode",
     "algorithms",
-    "java"
+    "java",
+    "two-pointers",
+    "sorting",
+    "arrays"
   ],
   "preview": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]\nsuch that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\nNotice that the solution set must not conta",
   "createdAt": 1775908528754,

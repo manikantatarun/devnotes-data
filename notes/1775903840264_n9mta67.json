@@ -1,6 +1,6 @@
 {
   "type": "qa",
-  "category": "algorithms",
+  "category": "coding",
   "title": "Time complexity of Binary Search",
   "question": "What is the time complexity of binary search and why?",
   "answer": "Binary search has a time complexity of **O(log n)**.\n\n**Reasoning:**\nWith each comparison, binary search eliminates half of the remaining elements. So for n elements:\n- After 1 comparison: n/2 elements remain\n- After 2 comparisons: n/4 elements remain\n- After k comparisons: n/2^k elements remain\n\nWe stop when n/2^k = 1, which means 2^k = n, so k = log₂(n).\n\n**Space complexity:** O(1) for iterative, O(log n) for recursive.",

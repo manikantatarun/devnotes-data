@@ -2,7 +2,13 @@
   "type": "qa",
   "category": "coding",
   "title": "Two Sum",
-  "tags": [],
+  "tags": [
+    "algorithms",
+    "hashmap",
+    "arrays",
+    "leetcode",
+    "two-pointers"
+  ],
   "question": "Given an array of integers and a target, return indices of two numbers that add up to target.",
   "answer": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        need = target - n\n        if need in seen:\n            return [seen[need], i]\n        seen[n] = i\n    return []",
   "language": "python",

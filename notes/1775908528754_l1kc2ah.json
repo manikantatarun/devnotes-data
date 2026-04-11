@@ -3,7 +3,7 @@
   "category": "coding",
   "title": "Java Stream API - Flattening nested collections",
   "question": "How to use Stream.flatMap() in Java?",
-  "answer": "Example usage:\n\n```java\n////            .flatMap(List::stream).collect(Collectors.toList());\n\n```",
+  "answer": "The flatMap() method flattens nested structures by mapping each element to a stream and then concatenating all streams.\n\n**Syntax:**\n```java\n<R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper)\n```\n\n**Example:**\n```java\nList<List<String>> listOfLists = Arrays.asList(\n    Arrays.asList(\"a\", \"b\"),\n    Arrays.asList(\"c\", \"d\"),\n    Arrays.asList(\"e\", \"f\")\n);\n\n// Flatten nested lists\nList<String> flatList = listOfLists.stream()\n    .flatMap(List::stream)\n    .collect(Collectors.toList());\n// Result: [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]\n```\n\n**Use cases:**\n- Flattening nested collections\n- Processing Optional values\n- Splitting strings into words\n- One-to-many transformations",
   "tags": [
     "java",
     "stream-api",

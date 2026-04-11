@@ -1,7 +1,7 @@
 {
   "id": "1775908528754_0tyrua8",
   "type": "coding",
-  "category": "devops",
+  "category": "coding",
   "title": "Jenkins Pipeline with Parallel Execution",
   "language": "groovy",
   "languages": [

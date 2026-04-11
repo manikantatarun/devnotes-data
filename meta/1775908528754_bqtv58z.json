@@ -1,7 +1,7 @@
 {
   "id": "1775908528754_bqtv58z",
   "type": "coding",
-  "category": "algorithms",
+  "category": "coding",
   "title": "Container With Most Water",
   "language": "java",
   "languages": [
@@ -10,7 +10,10 @@
   "tags": [
     "leetcode",
     "algorithms",
-    "java"
+    "java",
+    "two-pointers",
+    "greedy",
+    "arrays"
   ],
   "preview": "Static Block to warm up the JVM\nYou are given an integer array height of length n.\nThere are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\nFind two ",
   "createdAt": 1775908528754,

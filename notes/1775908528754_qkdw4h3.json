@@ -3,7 +3,7 @@
   "category": "coding",
   "title": "Java Stream API - Grouping elements",
   "question": "How to use Stream.groupingBy() in Java?",
-  "answer": "Example usage:\n\n```java\n//    Map<String,  Map<String, Long>> values = humans.stream().collect(Collectors.groupingBy(Human::getState,Collectors.groupingBy(Human::getGender,Collectors.counting())));\n\n```",
+  "answer": "The groupingBy() collector groups elements by a classifier function.\n\n**Syntax:**\n```java\nCollector groupingBy(Function<? super T,? extends K> classifier)\n```\n\n**Example:**\n```java\nList<Human> humans = Arrays.asList(\n    new Human(\"h1\", \"male\", \"AP\"),\n    new Human(\"h2\", \"female\", \"TN\"),\n    new Human(\"h3\", \"male\", \"AP\")\n);\n\n// Group by state\nMap<String, List<Human>> byState = humans.stream()\n    .collect(Collectors.groupingBy(Human::getState));\n\n// Multi-level grouping: by state, then gender with count\nMap<String, Map<String, Long>> byStateAndGender = humans.stream()\n    .collect(Collectors.groupingBy(\n        Human::getState,\n        Collectors.groupingBy(\n            Human::getGender,\n            Collectors.counting()\n        )\n    ));\n// Result: {\"AP\": {\"male\": 2}, \"TN\": {\"female\": 1}}\n```\n\n**Use cases:**\n- Creating frequency maps\n- Multi-level grouping\n- Aggregating data by categories",
   "tags": [
     "java",
     "stream-api",
