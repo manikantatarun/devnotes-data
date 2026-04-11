@@ -1,0 +1,16 @@
+{
+  "type": "qa",
+  "category": "coding",
+  "title": "Java Stream API - Collecting results",
+  "question": "How to use Stream.collect() in Java?",
+  "answer": "Example usage:\n\n```java\n////            .flatMap(List::stream).collect(Collectors.toList());\n\n//    Map<String,  Map<String, Long>> values = humans.stream().collect(Collectors.groupingBy(Human::getState,Collectors.groupingBy(Human::getGender,Collectors.counting())));\n\n```",
+  "tags": [
+    "java",
+    "stream-api",
+    "collect"
+  ],
+  "language": "java",
+  "id": "1775908528754_id73luu",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
