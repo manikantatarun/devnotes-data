@@ -3,14 +3,17 @@
   "type": "coding",
   "category": "algorithms",
   "title": "Product Of Array Except Itself",
-  "language": "java",
   "languages": [
-    "java"
+    "java",
+    "python"
   ],
   "tags": [
     "leetcode",
     "algorithms",
-    "java"
+    "java",
+    "python",
+    "arrays",
+    "prefix-sum"
   ],
   "preview": "Given an integer array nums, return an array answer such that answer[i] is equal to the\nproduct of all the elements of nums except nums[i].\nThe product of any prefix or suffix of nums is guaranteed to",
   "createdAt": 1775908528754,

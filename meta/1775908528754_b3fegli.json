@@ -3,14 +3,15 @@
   "type": "coding",
   "category": "algorithms",
   "title": "Maxium Subarray",
-  "language": "java",
   "languages": [
-    "java"
+    "java",
+    "python"
   ],
   "tags": [
     "leetcode",
     "algorithms",
     "java",
+    "python",
     "dynamic-programming",
     "kadanes-algorithm",
     "arrays"

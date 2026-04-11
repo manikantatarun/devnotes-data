@@ -3,14 +3,18 @@
   "type": "coding",
   "category": "algorithms",
   "title": "Duplicate",
-  "language": "java",
   "languages": [
-    "java"
+    "java",
+    "python"
   ],
   "tags": [
     "leetcode",
     "algorithms",
-    "java"
+    "java",
+    "python",
+    "hash-table",
+    "arrays",
+    "sliding-window"
   ],
   "preview": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct\nInput: nums = [1,2,3,1)\nOutput: true\nInput: nums = [1,2,3,4]\nOu",
   "createdAt": 1775908528754,

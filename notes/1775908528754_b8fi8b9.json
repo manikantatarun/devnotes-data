@@ -3,13 +3,25 @@
   "category": "algorithms",
   "title": "Best Time To Buy And Sell",
   "problem": "You are given an array prices where prices(il is the price of a given stock on the ith day.\nYou want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.\nReturn the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return o .\nInput: prices = [17,1,5,3,6,4]\nNote that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.\nInput: prices = [17,6,4,3,1]",
-  "solution": "package problems;\n\npublic class bestTimeToBuyAndSell {\n    \n\n\n    public static void main(String[] args) {\n        int[] prices = {17,1,5,3,6,4};\n\n        System.out.println(\"Maximum profits are \"+maxProfit(prices));\n\n\n\n    }\n\n\n    public static int maxProfit(int[] prices){\n        // You are given an array prices where prices(il is the price of a given stock on the ith day.\n        // You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.\n        // Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return o .\n        // Example 1:\n        // Input: prices = [17,1,5,3,6,4]\n        // Output: 5\n        // Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.\n        // Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.\n        // Example 2:\n        // Input: prices = [17,6,4,3,1]\n        // Output: 0\n        // Explanation: In this case, no transactions are done and the max profit = 0.\n\n        int min = prices[0];\n        int profit = 0;\n\n\n        for(int i =0;i<prices.length;i++){\n            if(prices[i] < min){\n                min = prices[i];\n            }\n            profit = Math.max(profit, prices[i]-min);\n        }\n        return profit;\n    }\n}\n",
+  "solutions": [
+    {
+      "language": "java",
+      "solution": "package problems;\n\npublic class bestTimeToBuyAndSell {\n\n    public static void main(String[] args) {\n        int[] prices = {17, 1, 5, 3, 6, 4};\n        System.out.println(\"Maximum profits are \" + maxProfit(prices));\n    }\n\n    /**\n     * One-pass algorithm to find maximum profit.\n     * Track minimum price seen so far and calculate profit at each step.\n     * \n     * Time: O(n), Space: O(1)\n     * \n     * Algorithm:\n     * - Keep track of minimum price encountered\n     * - At each price, calculate potential profit if selling today\n     * - Update maximum profit if current profit is higher\n     */\n    public static int maxProfit(int[] prices) {\n        int min = prices[0];\n        int profit = 0;\n\n        for (int i = 0; i < prices.length; i++) {\n            // Update minimum price if we found a lower one\n            if (prices[i] < min) {\n                min = prices[i];\n            }\n            // Calculate profit if we sell at current price\n            profit = Math.max(profit, prices[i] - min);\n        }\n        \n        return profit;\n    }\n}\n\n// Example 1:\n// Input: prices = [17,1,5,3,6,4]\n// Output: 5\n// Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6)\n// Profit = 6 - 1 = 5\n\n// Example 2:\n// Input: prices = [17,6,4,3,1]\n// Output: 0\n// Explanation: No transactions done, max profit = 0"
+    },
+    {
+      "language": "python",
+      "solution": "from typing import List\n\nclass Solution:\n    def maxProfit(self, prices: List[int]) -> int:\n        \"\"\"\n        One-pass algorithm to find maximum profit from stock prices.\n        \n        Time: O(n), Space: O(1)\n        \n        Algorithm:\n        - Track minimum price seen so far\n        - At each price, calculate potential profit if selling today\n        - Update maximum profit if current profit is higher\n        \n        Args:\n            prices: List of stock prices where prices[i] is price on day i\n        \n        Returns:\n            Maximum profit achievable, or 0 if no profit possible\n        \n        Examples:\n            >>> sol = Solution()\n            >>> sol.maxProfit([17,1,5,3,6,4])\n            5\n            >>> sol.maxProfit([17,6,4,3,1])\n            0\n        \"\"\"\n        min_price = prices[0]\n        max_profit = 0\n        \n        for price in prices:\n            # Update minimum price if we found a lower one\n            if price < min_price:\n                min_price = price\n            \n            # Calculate profit if we sell at current price\n            max_profit = max(max_profit, price - min_price)\n        \n        return max_profit\n\n# Example usage\nif __name__ == \"__main__\":\n    sol = Solution()\n    \n    prices1 = [17, 1, 5, 3, 6, 4]\n    print(f\"Maximum profit: {sol.maxProfit(prices1)}\")  # 5\n    \n    prices2 = [17, 6, 4, 3, 1]\n    print(f\"Maximum profit: {sol.maxProfit(prices2)}\")  # 0"
+    }
+  ],
   "tags": [
     "leetcode",
     "algorithms",
-    "java"
+    "java",
+    "python",
+    "greedy",
+    "arrays",
+    "dynamic-programming"
   ],
-  "language": "java",
   "id": "1775908528754_b8fi8b9",
   "createdAt": 1775908528754,
   "updatedAt": 1775908528754

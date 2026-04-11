@@ -3,14 +3,15 @@
   "type": "coding",
   "category": "algorithms",
   "title": "Two Sum",
-  "language": "java",
   "languages": [
-    "java"
+    "java",
+    "python"
   ],
   "tags": [
     "leetcode",
     "algorithms",
     "java",
+    "python",
     "hashmap",
     "arrays",
     "two-pointers"

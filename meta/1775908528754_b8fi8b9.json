@@ -3,14 +3,18 @@
   "type": "coding",
   "category": "algorithms",
   "title": "Best Time To Buy And Sell",
-  "language": "java",
   "languages": [
-    "java"
+    "java",
+    "python"
   ],
   "tags": [
     "leetcode",
     "algorithms",
-    "java"
+    "java",
+    "python",
+    "greedy",
+    "arrays",
+    "dynamic-programming"
   ],
   "preview": "You are given an array prices where prices(il is the price of a given stock on the ith day.\nYou want to maximize your profit by choosing a single day to buy one stock and choosing a different day in t",
   "createdAt": 1775908528754,
