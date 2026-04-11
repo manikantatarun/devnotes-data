@@ -1,0 +1,16 @@
+{
+  "type": "qa",
+  "category": "coding",
+  "title": "Java Stream API - Flattening nested collections",
+  "question": "How to use Stream.flatMap() in Java?",
+  "answer": "Example usage:\n\n```java\n////            .flatMap(List::stream).collect(Collectors.toList());\n\n```",
+  "tags": [
+    "java",
+    "stream-api",
+    "flatMap"
+  ],
+  "language": "java",
+  "id": "1775908528754_l1kc2ah",
+  "createdAt": 1775908528754,
+  "updatedAt": 1775908528754
+}
