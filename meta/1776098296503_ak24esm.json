@@ -1,0 +1,20 @@
+{
+  "id": "1776098296503_ak24esm",
+  "type": "coding",
+  "category": "data-structures",
+  "title": "Minimum Additions to Distribute Cards into Equal Packets",
+  "language": "java",
+  "languages": [
+    "java",
+    "python"
+  ],
+  "tags": [
+    "java",
+    "python",
+    "data-structures",
+    "ibm"
+  ],
+  "preview": "You are given a list cardTypes, where each element represents the number of cards of a particular type.\n\nYou need to create k packets (k > 1) such that:\n\nEach packet contains the same number of cards ",
+  "createdAt": 1776098296503,
+  "updatedAt": 1776098296503
+}
