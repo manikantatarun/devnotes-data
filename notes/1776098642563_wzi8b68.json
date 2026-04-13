@@ -1,0 +1,27 @@
+{
+  "id": "1776098642563_wzi8b68",
+  "type": "coding",
+  "category": "data-structures",
+  "title": "Track Product of Minimum and Maximum in a Dynamic Multiset",
+  "tags": [
+    "java",
+    "python",
+    "data-structures",
+    "ibm"
+  ],
+  "createdAt": 1776098642563,
+  "updatedAt": 1776098642563,
+  "problem": "You are given:\n\noperations[] → list of operations (\"push\" or \"pop\")\nx[] → corresponding values\n\nYou maintain a multiset (duplicates allowed).\n\nRules:\n\"push x\" → insert x\n\"pop x\" → remove one occurrence of x (guaranteed to exist)\n\nAfter each operation:\n\nFind minimum element\nFind maximum element\n\nCompute:\n\nmin\n×\nmax\nmin×max\nAppend result to output array\n📥 Input\nList<String> operations\nList<Integer> x\n📤 Output\nList<Long> → product after each operation\n✅ Example\nInput:\noperations = [\"push\", \"push\", \"push\", \"pop\"]\nx = [1, 2, 3, 1]\n\nOutput:\n[1, 2, 3, 6]\n\n\n| Step | Operation | Elements | Min | Max | Product |\n| ---- | --------- | -------- | --- | --- | ------- |\n| 1    | push 1    | [1]      | 1   | 1   | 1       |\n| 2    | push 2    | [1,2]    | 1   | 2   | 2       |\n| 3    | push 3    | [1,2,3]  | 1   | 3   | 3       |\n| 4    | pop 1     | [2,3]    | 2   | 3   | 6       |\n\n🧠 Approach\n\nUse a TreeMap (Java):\n\nStores elements in sorted order\nKey = value\nValue = frequency\nWhy TreeMap?\nfirstKey() → min (O(log n))\nlastKey() → max (O(log n))\nInsert/Delete → O(log n)",
+  "solutions": [
+    {
+      "language": "java",
+      "solution": "import java.util.*;\n\npublic class Solution {\n\n    public static List<Long> minMaxProduct(List<String> operations, List<Integer> x) {\n        TreeMap<Integer, Integer> map = new TreeMap<>();\n        List<Long> result = new ArrayList<>();\n\n        for (int i = 0; i < operations.size(); i++) {\n            String op = operations.get(i);\n            int val = x.get(i);\n\n            if (op.equals(\"push\")) {\n                map.put(val, map.getOrDefault(val, 0) + 1);\n            } else { // pop\n                int count = map.get(val);\n                if (count == 1) {\n                    map.remove(val);\n                } else {\n                    map.put(val, count - 1);\n                }\n            }\n\n            int min = map.firstKey();\n            int max = map.lastKey();\n            result.add((long) min * max);\n        }\n\n        return result;\n    }\n\n    public static void main(String[] args) {\n        // Sample Input\n        List<String> operations = Arrays.asList(\"push\", \"push\", \"push\", \"pop\");\n        List<Integer> x = Arrays.asList(1, 2, 3, 1);\n\n        // Method Call\n        List<Long> result = minMaxProduct(operations, x);\n\n        // Output\n        System.out.println(\"Products: \" + result);\n    }\n}"
+    },
+    {
+      "language": "python",
+      "solution": "from collections import Counter\nimport bisect\n\ndef min_max_product(operations, x):\n    arr = []\n    count = Counter()\n    result = []\n\n    for op, val in zip(operations, x):\n        if op == \"push\":\n            if count[val] == 0:\n                bisect.insort(arr, val)\n            count[val] += 1\n        else:\n            count[val] -= 1\n            if count[val] == 0:\n                arr.pop(bisect.bisect_left(arr, val))\n\n        result.append(arr[0] * arr[-1])\n\n    return result\n\n\n# Sample Input\noperations = [\"push\", \"push\", \"push\", \"pop\"]\nx = [1, 2, 3, 1]\n\n# Method Call\nresult = min_max_product(operations, x)\n\n# Output\nprint(\"Products:\", result)"
+    }
+  ],
+  "language": "java",
+  "solution": "import java.util.*;\n\npublic class Solution {\n\n    public static List<Long> minMaxProduct(List<String> operations, List<Integer> x) {\n        TreeMap<Integer, Integer> map = new TreeMap<>();\n        List<Long> result = new ArrayList<>();\n\n        for (int i = 0; i < operations.size(); i++) {\n            String op = operations.get(i);\n            int val = x.get(i);\n\n            if (op.equals(\"push\")) {\n                map.put(val, map.getOrDefault(val, 0) + 1);\n            } else { // pop\n                int count = map.get(val);\n                if (count == 1) {\n                    map.remove(val);\n                } else {\n                    map.put(val, count - 1);\n                }\n            }\n\n            int min = map.firstKey();\n            int max = map.lastKey();\n            result.add((long) min * max);\n        }\n\n        return result;\n    }\n\n    public static void main(String[] args) {\n        // Sample Input\n        List<String> operations = Arrays.asList(\"push\", \"push\", \"push\", \"pop\");\n        List<Integer> x = Arrays.asList(1, 2, 3, 1);\n\n        // Method Call\n        List<Long> result = minMaxProduct(operations, x);\n\n        // Output\n        System.out.println(\"Products: \" + result);\n    }\n}"
+}
