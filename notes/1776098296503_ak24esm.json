@@ -1,0 +1,27 @@
+{
+  "id": "1776098296503_ak24esm",
+  "type": "coding",
+  "category": "data-structures",
+  "title": "Minimum Additions to Distribute Cards into Equal Packets",
+  "tags": [
+    "java",
+    "python",
+    "data-structures",
+    "ibm"
+  ],
+  "createdAt": 1776098296503,
+  "updatedAt": 1776098296503,
+  "problem": "You are given a list cardTypes, where each element represents the number of cards of a particular type.\n\nYou need to create k packets (k > 1) such that:\n\nEach packet contains the same number of cards of each type\nYou can only add cards (no removal allowed)\n🎯 Task\n\nFind the minimum number of cards you need to add so that all card counts can be evenly divided into some number of packets k > 1.\n\n📥 Input\nList<Integer> cardTypes\n📤 Output\nInteger → minimum number of cards to add\n✅ Example\nInput:\ncardTypes = [4, 7, 5, 11, 15]\n\nOutput:\n4\n💡 Explanation\n\nTry k = 2:\n\n4 → 4 (+0)\n7 → 8 (+1)\n5 → 6 (+1)\n11 → 12 (+1)\n15 → 16 (+1)\n\nTotal additions = 4 (minimum)",
+  "solutions": [
+    {
+      "language": "java",
+      "solution": "import java.util.*;\n\npublic class Solution {\n\n    public static int minCardsToAdd(List<Integer> cardTypes) {\n        int maxVal = Collections.max(cardTypes);\n        int minAdditions = Integer.MAX_VALUE;\n\n        for (int k = 2; k <= maxVal; k++) {\n            int totalAdd = 0;\n\n            for (int x : cardTypes) {\n                totalAdd += (k - x % k) % k;\n            }\n\n            minAdditions = Math.min(minAdditions, totalAdd);\n        }\n\n        return minAdditions;\n    }\n\n    public static void main(String[] args) {\n        // Sample Input\n        List<Integer> cardTypes = Arrays.asList(4, 7, 5, 11, 15);\n\n        // Method Call\n        int result = minCardsToAdd(cardTypes);\n\n        // Output\n        System.out.println(\"Minimum cards to add: \" + result);\n    }\n}"
+    },
+    {
+      "language": "python",
+      "solution": "def min_cards_to_add(cardTypes):\n    max_val = max(cardTypes)\n    min_additions = float('inf')\n\n    for k in range(2, max_val + 1):\n        total = 0\n        for x in cardTypes:\n            total += (k - x % k) % k\n        min_additions = min(min_additions, total)\n\n    return min_additions\n\n\n# Sample Input\ncardTypes = [4, 7, 5, 11, 15]\n\n# Method Call\nresult = min_cards_to_add(cardTypes)\n\n# Output\nprint(\"Minimum cards to add:\", result)"
+    }
+  ],
+  "language": "java",
+  "solution": "import java.util.*;\n\npublic class Solution {\n\n    public static int minCardsToAdd(List<Integer> cardTypes) {\n        int maxVal = Collections.max(cardTypes);\n        int minAdditions = Integer.MAX_VALUE;\n\n        for (int k = 2; k <= maxVal; k++) {\n            int totalAdd = 0;\n\n            for (int x : cardTypes) {\n                totalAdd += (k - x % k) % k;\n            }\n\n            minAdditions = Math.min(minAdditions, totalAdd);\n        }\n\n        return minAdditions;\n    }\n\n    public static void main(String[] args) {\n        // Sample Input\n        List<Integer> cardTypes = Arrays.asList(4, 7, 5, 11, 15);\n\n        // Method Call\n        int result = minCardsToAdd(cardTypes);\n\n        // Output\n        System.out.println(\"Minimum cards to add: \" + result);\n    }\n}"
+}
