@@ -1,0 +1,20 @@
+{
+  "id": "1776098642563_wzi8b68",
+  "type": "coding",
+  "category": "data-structures",
+  "title": "Track Product of Minimum and Maximum in a Dynamic Multiset",
+  "language": "java",
+  "languages": [
+    "java",
+    "python"
+  ],
+  "tags": [
+    "java",
+    "python",
+    "data-structures",
+    "ibm"
+  ],
+  "preview": "You are given:\n\noperations[] → list of operations (\"push\" or \"pop\")\nx[] → corresponding values\n\nYou maintain a multiset (duplicates allowed).\n\nRules:\n\"push x\" → insert x\n\"pop x\" → remove one occurrenc",
+  "createdAt": 1776098642563,
+  "updatedAt": 1776098642563
+}
