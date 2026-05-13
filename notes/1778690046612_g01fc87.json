@@ -1,0 +1,15 @@
+{
+  "id": "1778690046612_g01fc87",
+  "type": "qa",
+  "category": "system-design",
+  "title": "What is QUIC protocol?",
+  "tags": [
+    "quic",
+    "google's protocol",
+    "protocol"
+  ],
+  "createdAt": 1778690046612,
+  "updatedAt": 1778690046612,
+  "question": "What is QUIC protocol? and explain",
+  "answer": "QUIC (Quick UDP Internet Connections) is a modern, encrypted-by-default transport layer protocol designed by Google and standardized by the IETF, aimed at reducing latency and improving web performance over UDP. \nIt powers HTTP/3, featuring faster, low-latency handshakes, multiplexing without head-of-line blocking, and seamless connection migration, making it ideal for mobile networks.\nKey Features and Advantages of QUIC:- \n* Faster Connection Setup (0-RTT/1-RTT): Unlike TCP+TLS which requires multiple round trips, QUIC integrates the TLS 1.3 cryptographic handshake into its transport handshake, allowing data transfer in 0 or 1 round-trip.\n* No Head-of-Line Blocking: While TCP pauses all streams if one packet is lost, QUIC streams are independent. If data from one stream is lost, only that stream waits, improving overall performance.\n* Improved Congestion Control: QUIC provides better network congestion control, allowing for smoother data flow even over unstable or fluctuating mobile networks.\n* Connection Migration: Because QUIC connections are identified by a unique ID rather than a 4-tuple (IPs/Ports), a user moving from Wi-Fi to cellular keeps their session active without interruption.Built-in Encryption: Security is mandatory. QUIC uses TLS 1.3 to encrypt headers and data, improving privacy."
+}
