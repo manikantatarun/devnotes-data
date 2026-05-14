@@ -1,0 +1,113 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (REQUIRED) -->
+  <rect width="800" height="420" fill="#f8f9fa" rx="10"/>
+
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9b59b6"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">Version History</text>
+
+  <!-- Users -->
+  <rect x="40" y="80" width="80" height="50" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="80" y="110" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Users</text>
+
+  <!-- Document Service -->
+  <rect x="180" y="80" width="110" height="50" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="235" y="102" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Document</text>
+  <text x="235" y="118" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Service</text>
+
+  <!-- Metadata Database -->
+  <rect x="180" y="155" width="110" height="40" rx="8" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+  <text x="235" y="180" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Metadata DB</text>
+
+  <!-- Collaboration Service -->
+  <rect x="370" y="65" width="130" height="50" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="435" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Collaboration Service</text>
+
+  <!-- Operation Log -->
+  <rect x="570" y="65" width="110" height="50" rx="8" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+  <text x="625" y="87" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Operation</text>
+  <text x="625" y="103" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Log</text>
+
+  <!-- Snapshot Writer (NEW) -->
+  <rect x="370" y="170" width="130" height="50" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="435" y="192" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Snapshot</text>
+  <text x="435" y="208" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Writer</text>
+  <!-- NEW tag -->
+  <rect x="464" y="162" width="36" height="16" rx="3" fill="#e74c3c" stroke="#fff" stroke-width="1"/>
+  <text x="482" y="174" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">NEW</text>
+
+  <!-- Revision Store (NEW) -->
+  <rect x="570" y="170" width="110" height="50" rx="8" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+  <text x="625" y="192" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Revision</text>
+  <text x="625" y="208" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Store</text>
+  <!-- NEW tag -->
+  <rect x="644" y="162" width="36" height="16" rx="3" fill="#e74c3c"/>
+  <text x="662" y="174" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">NEW</text>
+
+  <!-- Object Storage -->
+  <rect x="570" y="260" width="110" height="50" rx="8" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+  <text x="625" y="282" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Object Storage</text>
+  <text x="625" y="298" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Snapshots)</text>
+
+  <!-- Connections -->
+  <!-- Users to Document Service -->
+  <path d="M 120,105 L 172,105" stroke="#3498db" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <circle cx="146" cy="90" r="12" fill="#3498db"/>
+  <text x="146" y="94" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">1</text>
+
+  <!-- Document Service to Metadata DB -->
+  <path d="M 235,130 L 235,147" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Document Service to Revision Store (list revisions) -->
+  <path d="M 290,105 L 320,105 L 320,245 L 625,245 L 625,228" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+  <circle cx="470" cy="245" r="12" fill="#9b59b6"/>
+  <text x="470" y="249" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">2</text>
+
+  <!-- Collaboration to Operation Log -->
+  <path d="M 500,90 L 562,90" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Snapshot Writer reads from Operation Log (direct diagonal) -->
+  <path d="M 570,112 L 508,170" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow-red)"/>
+  <circle cx="540" cy="138" r="12" fill="#e74c3c"/>
+  <text x="540" y="142" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">3</text>
+
+  <!-- Snapshot Writer to Revision Store -->
+  <path d="M 500,195 L 562,195" stroke="#e74c3c" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <circle cx="531" cy="180" r="12" fill="#e74c3c"/>
+  <text x="531" y="184" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">4</text>
+
+  <!-- Snapshot Writer to Object Storage -->
+  <path d="M 435,220 L 435,285 L 562,285" stroke="#e74c3c" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <circle cx="435" cy="252" r="12" fill="#e74c3c"/>
+  <text x="435" y="256" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">5</text>
+
+  <!-- Hybrid storage note -->
+  <rect x="40" y="235" width="200" height="65" rx="6" fill="#e3f2fd" stroke="#3498db" stroke-width="1"/>
+  <text x="140" y="258" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#2c3e50">Hybrid Storage</text>
+  <text x="140" y="275" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">Periodic snapshots +</text>
+  <text x="140" y="290" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">deltas in between</text>
+
+  <!-- Legend -->
+  <rect x="40" y="335" width="720" height="70" rx="8" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+
+  <text x="60" y="362" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    <tspan font-weight="bold">1</tspan> List/restore revisions
+    <tspan font-weight="bold" dx="15">2</tspan> Query revision metadata
+    <tspan font-weight="bold" dx="15">3</tspan> Read operation log
+    <tspan font-weight="bold" dx="15">4</tspan> Write revision record
+    <tspan font-weight="bold" dx="15">5</tspan> Store snapshot blob
+  </text>
+
+  <text x="60" y="388" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#7f8c8d">Restoring updates head_revision_id pointer and creates a new revision entry.</text>
+</svg>
