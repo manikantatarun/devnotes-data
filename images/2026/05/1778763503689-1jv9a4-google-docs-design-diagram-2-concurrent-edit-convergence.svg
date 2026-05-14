@@ -1,0 +1,121 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (REQUIRED) -->
+  <rect width="800" height="440" fill="#f8f9fa" rx="10"/>
+
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9b59b6"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">Concurrent Edit Convergence</text>
+
+  <!-- Users -->
+  <rect x="40" y="100" width="80" height="50" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="80" y="130" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Users</text>
+
+  <!-- Real-time Gateway -->
+  <rect x="180" y="100" width="110" height="50" rx="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="235" y="122" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Real-time</text>
+  <text x="235" y="138" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Gateway</text>
+
+  <!-- Collaboration Service with Sequencer (NEW) -->
+  <rect x="350" y="70" width="150" height="110" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="425" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Collaboration</text>
+  <text x="425" y="118" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Service</text>
+  <!-- NEW tag -->
+  <rect x="463" y="62" width="36" height="16" rx="3" fill="#e74c3c"/>
+  <text x="481" y="74" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">NEW</text>
+
+  <!-- Sequencer inside -->
+  <rect x="365" y="130" width="120" height="35" rx="4" fill="#8e44ad" stroke="#7d3c98" stroke-width="1"/>
+  <text x="425" y="152" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Sequencer (OT)</text>
+
+  <!-- Operation Log (NEW) -->
+  <rect x="570" y="85" width="110" height="50" rx="8" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+  <text x="625" y="107" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Operation</text>
+  <text x="625" y="123" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Log</text>
+  <!-- NEW tag -->
+  <rect x="644" y="77" width="36" height="16" rx="3" fill="#e74c3c"/>
+  <text x="662" y="89" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">NEW</text>
+
+  <!-- Document Service -->
+  <rect x="570" y="175" width="110" height="50" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="625" y="197" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Document</text>
+  <text x="625" y="213" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Service</text>
+
+  <!-- Message Queue -->
+  <rect x="350" y="240" width="150" height="50" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="425" y="270" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Message Queue</text>
+
+  <!-- Database (Metadata) -->
+  <rect x="570" y="245" width="110" height="40" rx="8" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+  <text x="625" y="265" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Database</text>
+  <text x="625" y="278" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="white">(Metadata)</text>
+
+  <!-- Object Storage (Content) -->
+  <rect x="570" y="300" width="110" height="40" rx="8" fill="#27ae60" stroke="#1e8449" stroke-width="2"/>
+  <text x="625" y="320" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Object Storage</text>
+  <text x="625" y="333" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="white">(Content)</text>
+
+  <!-- Connections -->
+  <!-- Users to Gateway -->
+  <path d="M 120,125 L 172,125" stroke="#3498db" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <circle cx="146" cy="110" r="12" fill="#3498db"/>
+  <text x="146" y="114" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">1</text>
+
+  <!-- Gateway to Collaboration Service -->
+  <path d="M 290,125 L 342,125" stroke="#f39c12" stroke-width="2" fill="none" marker-end="url(#arrow-orange)"/>
+  <circle cx="316" cy="110" r="12" fill="#f39c12"/>
+  <text x="316" y="114" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">2</text>
+
+  <!-- Collaboration to Operation Log -->
+  <path d="M 500,110 L 562,110" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+  <circle cx="531" cy="95" r="12" fill="#9b59b6"/>
+  <text x="531" y="99" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">3</text>
+
+  <!-- Collaboration to Document Service -->
+  <path d="M 500,155 L 562,190" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+  <circle cx="531" cy="185" r="12" fill="#9b59b6"/>
+  <text x="531" y="189" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">4</text>
+
+  <!-- Document Service to Database -->
+  <path d="M 625,225 L 625,237" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Document Service to Object Storage -->
+  <path d="M 610,225 L 610,292" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Collaboration to Message Queue -->
+  <path d="M 425,180 L 425,232" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+  <circle cx="443" cy="208" r="12" fill="#e74c3c"/>
+  <text x="443" y="212" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">5</text>
+
+  <!-- Message Queue to Gateway (fanout) -->
+  <path d="M 350,265 L 235,265 L 235,158" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow-red)"/>
+  <circle cx="290" cy="252" r="12" fill="#e74c3c"/>
+  <text x="290" y="256" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">6</text>
+
+  <!-- Legend -->
+  <rect x="40" y="360" width="720" height="65" rx="8" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+
+  <text x="60" y="385" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    <tspan font-weight="bold">1</tspan> Send edit ops
+    <tspan font-weight="bold" dx="20">2</tspan> Forward to sequencer
+    <tspan font-weight="bold" dx="20">3</tspan> Append to log
+    <tspan font-weight="bold" dx="20">4</tspan> Update document
+    <tspan font-weight="bold" dx="20">5</tspan> Publish transformed op
+    <tspan font-weight="bold" dx="20">6</tspan> Broadcast to all
+  </text>
+
+  <text x="60" y="408" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#7f8c8d">The Sequencer applies Operational Transformation (OT) to merge concurrent edits into a consistent order.</text>
+</svg>
