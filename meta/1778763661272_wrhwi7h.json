@@ -1,0 +1,16 @@
+{
+  "id": "1778763661272_wrhwi7h",
+  "type": "blog",
+  "category": "system-design",
+  "title": "Design a Collaborative Editing System like Google Docs",
+  "languages": [],
+  "tags": [
+    "quic",
+    "google's protocol",
+    "Google Docs User Flow",
+    "docs"
+  ],
+  "preview": "## Introduction\n\nGoogle Docs is a collaborative editor where a user creates a document, edits text, invites collaborators, and restores earlier revisions. The system streams edits in real-time, merges",
+  "createdAt": 1778763661272,
+  "updatedAt": 1778763661272
+}
